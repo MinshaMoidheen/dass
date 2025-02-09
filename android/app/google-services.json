@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "710673444887",
+    "project_id": "dass-30de1",
+    "storage_bucket": "dass-30de1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710673444887:android:2ea395e2e87c768f1b6c52",
+        "android_client_info": {
+          "package_name": "com.example.mentalhealth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTtOGUS5PRgovC6j1kgwXjCncz66odXps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
