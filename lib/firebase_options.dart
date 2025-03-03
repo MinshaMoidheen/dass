@@ -47,28 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAiYZg4bottZKMWMIXr-yLuAN3_W_3sj9E',
-    appId: '1:710673444887:web:237a93e42efc24011b6c52',
-    messagingSenderId: '710673444887',
-    projectId: 'dass-30de1',
-    authDomain: 'dass-30de1.firebaseapp.com',
-    storageBucket: 'dass-30de1.appspot.com',
+    apiKey: 'AIzaSyAJa1tutsyqe-gQ3WzGLMfLgvAtFNFOOHs',
+    appId: '1:257057403780:web:115d8528f85aae00b163d1',
+    messagingSenderId: '257057403780',
+    projectId: 'dass-6dfd1',
+    authDomain: 'dass-6dfd1.firebaseapp.com',
+    storageBucket: 'dass-6dfd1.firebasestorage.app',
+    measurementId: 'G-T3HJEV0MRB',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCTtOGUS5PRgovC6j1kgwXjCncz66odXps',
-    appId: '1:710673444887:android:2ea395e2e87c768f1b6c52',
-    messagingSenderId: '710673444887',
-    projectId: 'dass-30de1',
-    storageBucket: 'dass-30de1.appspot.com',
+    apiKey: 'AIzaSyCoa8U51SAnEshpPMaxAi0XV_FiXqk0qyQ',
+    appId: '1:257057403780:android:3ee268cc0c420c2fb163d1',
+    messagingSenderId: '257057403780',
+    projectId: 'dass-6dfd1',
+    storageBucket: 'dass-6dfd1.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCWQaZx1BLJaQb9ZtSwWGGZsgdmi-gqVp4',
-    appId: '1:710673444887:ios:8b624d8974c1fa241b6c52',
-    messagingSenderId: '710673444887',
-    projectId: 'dass-30de1',
-    storageBucket: 'dass-30de1.appspot.com',
+    apiKey: 'AIzaSyDXOQCg0GnKp8yBo6qwPUeY5wwQrC5sR20',
+    appId: '1:257057403780:ios:2f1fb6f0358b6465b163d1',
+    messagingSenderId: '257057403780',
+    projectId: 'dass-6dfd1',
+    storageBucket: 'dass-6dfd1.firebasestorage.app',
     iosBundleId: 'com.example.mentalhealth',
   );
+
 }

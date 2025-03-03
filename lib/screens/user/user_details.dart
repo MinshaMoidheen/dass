@@ -96,45 +96,45 @@ class _UserDetailsState extends State<UserDetails> {
                     fontSize: 18,
                     fw: FontWeight.w700,
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-
-                  Center(
-                    child: CircleAvatar(
-                      radius: 33,
-                      child: GestureDetector(
-                        onTap: () {
-                          showImage();
-                        },
-                        child: Center(
-                          child: _image != null
-                              ? Container(
-                            height: 150,
-                            width: 150,
-                            decoration: BoxDecoration(
-                                color: Colors.red,
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image:
-                                    FileImage(File(_image!.path)))),
-                          )
-                              : Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.upload_file,
-                                  size: 20,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  // SizedBox(
+                  //   height: 20,
+                  // ),
+                  //
+                  // Center(
+                  //   child: CircleAvatar(
+                  //     radius: 33,
+                  //     child: GestureDetector(
+                  //       onTap: () {
+                  //         showImage();
+                  //       },
+                  //       child: Center(
+                  //         child: _image != null
+                  //             ? Container(
+                  //           height: 150,
+                  //           width: 150,
+                  //           decoration: BoxDecoration(
+                  //               color: Colors.red,
+                  //               shape: BoxShape.circle,
+                  //               image: DecorationImage(
+                  //                   fit: BoxFit.cover,
+                  //                   image:
+                  //                   FileImage(File(_image!.path)))),
+                  //         )
+                  //             : Container(
+                  //           child: Row(
+                  //             mainAxisAlignment: MainAxisAlignment.center,
+                  //             children: [
+                  //               Icon(
+                  //                 Icons.upload_file,
+                  //                 size: 20,
+                  //               )
+                  //             ],
+                  //           ),
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                   SizedBox(height: 10,),
                   Container(
                     width: 300,
@@ -483,17 +483,6 @@ class _UserDetailsState extends State<UserDetails> {
                     if (_regKey.currentState!.validate() ) {
                       if (_regKey.currentState!.validate()) {
                         try {
-                          String? url;
-
-                          // Check if image is selected
-                          if (_image != null) {
-                            var filename = DateTime.now();
-                            var ref = FirebaseStorage.instance.ref().child('patient/$filename');
-                            UploadTask utask = ref.putFile(File(_image!.path));
-                            await utask.then((res) async {
-                              url = (await ref.getDownloadURL()).toString();
-                            });
-                          }
 
                           FirebaseAuth.instance.createUserWithEmailAndPassword(
                             email: _emailController.text.trim(),
@@ -524,7 +513,6 @@ class _UserDetailsState extends State<UserDetails> {
                                 'status': 1,
                                 'createdAt': DateTime.now(),
                                 'usertype': "patient",
-                                'imageurl': url ?? "", // Use empty string if url is null
                               }).then((value) {
                                 showsnackbar("Registered Successfully!");
                                 Navigator.pop(context);
