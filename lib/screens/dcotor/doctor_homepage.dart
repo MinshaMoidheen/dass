@@ -24,11 +24,10 @@ class DoctorHomepage extends StatefulWidget {
   var qualification;
   var updates;
   var workhrs;
-  var imgurl;
 
 
 
-  DoctorHomepage({super.key,this.name,this.address,this.mobile,this.type,this.officename,this.imgurl,
+  DoctorHomepage({super.key,this.name,this.address,this.mobile,this.type,this.officename,
     this.uid,this.location,this.exp,this.updates,this.institution,this.licence,this.qualification,this.workhrs});
 
   @override
@@ -159,7 +158,7 @@ class _DoctorHomepageState extends State<DoctorHomepage> {
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(builder: (context){
                           return DocProfile(
-                            imgurl:widget.imgurl,
+
                             name: widget.name,
                             mobile: widget.mobile,
                             uid: widget.uid,
@@ -185,9 +184,7 @@ class _DoctorHomepageState extends State<DoctorHomepage> {
                             color: Colors.blueAccent,
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                              image: widget.imgurl != null
-                                  ? NetworkImage(widget.imgurl!)
-                                  : AssetImage('assets/img/profile.png')
+                              image: AssetImage('assets/img/profile.png')
                               as ImageProvider<Object>,
                               fit: BoxFit.cover, // You can adjust the BoxFit as needed
                             ),

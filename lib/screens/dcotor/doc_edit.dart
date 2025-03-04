@@ -428,7 +428,7 @@ class _DocEditState extends State<DocEdit> {
                         //   ),
                         // ),
                         SizedBox(
-                          height: 200,
+                          height: 80,
                         ),
 
 
@@ -480,6 +480,9 @@ class _DocEditState extends State<DocEdit> {
                           ),
                         ),
 
+                        SizedBox(
+                          height: 50,
+                        ),
                       ],
                     ),
                   ),

@@ -29,6 +29,8 @@ dependencies:
   flutter_pdfview:
   path_provider:
   win32:
+  firebase_app_check:
+
 
 
 

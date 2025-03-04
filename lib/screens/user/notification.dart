@@ -80,6 +80,10 @@ class _NotificationPageState extends State<NotificationPage> {
                                 "On ${formattedDate} at ${time}",
                                 style: TextStyle(fontSize: 18),
                               ),
+                              Text(
+                                "Doctor : ${snapshot.data?.docs[index]['doctorname']}",
+                                style: TextStyle(fontSize: 18),
+                              ),
 
                               SizedBox(height: 8),
                             ],

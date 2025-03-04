@@ -69,7 +69,7 @@ class _AllDoctorsState extends State<AllDoctors> {
                             name:snapshot.data?.docs[index]['fullname'] ,
                             phno: snapshot.data?.docs[index]['phno'],
                             updates: snapshot.data?.docs[index]['updates'],
-                            imgurl: snapshot.data?.docs[index]['imgurl'],
+                            //imgurl: snapshot.data?.docs[index]['imgurl'],
 
 
                             id: snapshot.data?.docs[index]['uid'],
@@ -126,9 +126,7 @@ class _AllDoctorsState extends State<AllDoctors> {
                                         color: Colors.blueAccent,
                                         shape: BoxShape.circle,
                                         image: DecorationImage(
-                                          image: snapshot.data?.docs[index]['imgurl'] != ""
-                                              ? NetworkImage(snapshot.data?.docs[index]['imgurl'])
-                                              : AssetImage('assets/img/profile.png')
+                                          image: AssetImage('assets/img/profile.png')
                                           as ImageProvider<Object>,
                                           fit: BoxFit.cover, // You can adjust the BoxFit as needed
                                         ),

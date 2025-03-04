@@ -58,9 +58,7 @@ class _DocDetailsState extends State<DocDetails> {
                               color: Colors.blueAccent,
                               shape: BoxShape.circle,
                               image: DecorationImage(
-                                image: widget.imgurl != ""
-                                    ? NetworkImage(widget.imgurl!)
-                                    : AssetImage('assets/img/profile.png')
+                                image: AssetImage('assets/img/profile.png')
                                 as ImageProvider<Object>,
                                 fit: BoxFit.cover, // You can adjust the BoxFit as needed
                               ),
@@ -80,13 +78,13 @@ class _DocDetailsState extends State<DocDetails> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
-                                widget.updates,
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.grey,
-                                ),
-                              ),
+                              // Text(
+                              //   widget.updates,
+                              //   style: TextStyle(
+                              //     fontSize: 16,
+                              //     color: Colors.grey,
+                              //   ),
+                              // ),
                               Text(
                                 widget.qualifoication,
                                 style: TextStyle(

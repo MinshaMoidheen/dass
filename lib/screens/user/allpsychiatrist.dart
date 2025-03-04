@@ -55,7 +55,7 @@ class _AllPsychiatristState extends State<AllPsychiatrist> {
                               updates: snapshot.data?.docs[index]['updates'],
                               uid: widget.uid,
                               createdname: widget.createdname,
-                              imgurl: snapshot.data?.docs[index]['imgurl'],
+                              //imgurl: snapshot.data?.docs[index]['imgurl'],
 
                               id: snapshot.data?.docs[index]['uid'],
                               location: snapshot.data?.docs[index]['location'],
@@ -95,9 +95,7 @@ class _AllPsychiatristState extends State<AllPsychiatrist> {
                                           color: Colors.blueAccent,
                                           shape: BoxShape.circle,
                                           image: DecorationImage(
-                                            image: snapshot.data?.docs[index]['imgurl'] != ""
-                                                ? NetworkImage(snapshot.data?.docs[index]['imgurl']!)
-                                                : AssetImage('assets/img/profile.png')
+                                            image:AssetImage('assets/img/profile.png')
                                             as ImageProvider<Object>,
                                             fit: BoxFit.cover, // You can adjust the BoxFit as needed
                                           ),

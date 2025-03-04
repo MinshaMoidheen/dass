@@ -306,46 +306,46 @@ class _EditDetailsState extends State<EditDetails> {
                           ),
                         ),
 
-                        Text("Upload Image"),
-
-
-                        Center(
-                          child: CircleAvatar(
-                            radius: 33,
-                            child: GestureDetector(
-                              onTap: () {
-                                showImage();
-
-                              },
-                              child: Center(
-                                child: _image != null
-                                    ? Container(
-                                  height: 150,
-                                  width: 150,
-                                  decoration: BoxDecoration(
-                                      color: Colors.red,
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image: FileImage(File(_image!.path)))),
-                                )
-                                    : Container(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.upload_file,
-                                        size: 20,
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        // Text("Upload Image"),
+                        //
+                        //
+                        // Center(
+                        //   child: CircleAvatar(
+                        //     radius: 33,
+                        //     child: GestureDetector(
+                        //       onTap: () {
+                        //         showImage();
+                        //
+                        //       },
+                        //       child: Center(
+                        //         child: _image != null
+                        //             ? Container(
+                        //           height: 150,
+                        //           width: 150,
+                        //           decoration: BoxDecoration(
+                        //               color: Colors.red,
+                        //               shape: BoxShape.circle,
+                        //               image: DecorationImage(
+                        //                   fit: BoxFit.cover,
+                        //                   image: FileImage(File(_image!.path)))),
+                        //         )
+                        //             : Container(
+                        //           child: Row(
+                        //             mainAxisAlignment: MainAxisAlignment.center,
+                        //             children: [
+                        //               Icon(
+                        //                 Icons.upload_file,
+                        //                 size: 20,
+                        //               )
+                        //             ],
+                        //           ),
+                        //         ),
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
                         SizedBox(
-                          height: 200,
+                          height: 80,
                         ),
 
 
@@ -425,6 +425,9 @@ class _EditDetailsState extends State<EditDetails> {
                               ),
                             ),
                           ),
+                        ),
+                        SizedBox(
+                          height: 50,
                         ),
 
                       ],

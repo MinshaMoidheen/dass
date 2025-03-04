@@ -165,9 +165,8 @@ class _HomePageState extends State<HomePage> {
                                   color: Colors.blueAccent,
                                   shape: BoxShape.circle,
                                   image: DecorationImage(
-                                    image: widget.imgurl != ""
-                                        ? NetworkImage(widget.imgurl!)
-                                        : AssetImage('assets/img/profile.png')
+                                    image:
+                                         AssetImage('assets/img/profile.png')
                                     as ImageProvider<Object>,
                                     fit: BoxFit.cover, // You can adjust the BoxFit as needed
                                   ),
@@ -180,310 +179,7 @@ class _HomePageState extends State<HomePage> {
 
 
 
-                    // SizedBox(
-                    //   height: 30,
-                    // ),
-                    // Container(
-                    //   height: 250,
-                    //   width: MediaQuery.of(context).size.width,
-                    //   child: Stack(
-                    //     children: [
-                    //       Container(
-                    //         width: 600,
-                    //         height: 150,
-                    //         decoration: BoxDecoration(
-                    //             color: Colors.grey.shade400,
-                    //             borderRadius: BorderRadius.circular(22)),
-                    //         child: Padding(
-                    //           padding: const EdgeInsets.all(20.0),
-                    //           child: Text(
-                    //             "Find the best psychologist for yourself! Our specialists will help you to find the best decisions for solving your problems!",
-                    //             style: TextStyle(
-                    //               color: Colors.black,
-                    //               fontWeight: FontWeight.bold,
-                    //             ),
-                    //           ),
-                    //         ),
-                    //       ),
-                    //       Align(
-                    //         alignment: Alignment(0, 0.9),
-                    //         child: Container(
-                    //           padding: EdgeInsets.all(15),
-                    //           decoration: BoxDecoration(
-                    //               color: Colors.white,
-                    //               borderRadius: BorderRadius.circular(20)),
-                    //           height: 150,
-                    //           width: MediaQuery.of(context).size.width * 0.92,
-                    //           child: SingleChildScrollView(
-                    //             scrollDirection: Axis.horizontal,
-                    //             child: Row(
-                    //               children: <Widget>[
-                    //                 Column(
-                    //                   mainAxisAlignment: MainAxisAlignment.center,
-                    //                   crossAxisAlignment:
-                    //                   CrossAxisAlignment.start,
-                    //                   children: [
-                    //                     Container(
-                    //                       child: Text(
-                    //                         "Type of counselling",
-                    //                         style: TextStyle(
-                    //                           color: Colors.grey.shade500,
-                    //                         ),
-                    //                       ),
-                    //                     ),
-                    //                     Container(
-                    //                       width: 200,
-                    //                       child: DropdownButtonFormField<String>(
-                    //                         value: typeOfCounselling,
-                    //                         isDense: true,
-                    //                         items: <String>[
-                    //                           "Select all",
-                    //                           "Psychotherapy",
-                    //                           "Family Therapy",
-                    //                           "Behaviour Therapy",
-                    //                           "Mental health",
-                    //                           "Talking Therapy",
-                    //                           "Postpartum"
-                    //                         ].map((state) {
-                    //                           return DropdownMenuItem<String>(
-                    //                             value: state,
-                    //                             child: Text(state),
-                    //                           );
-                    //                         }).toList(),
-                    //                         onChanged: (value) {
-                    //                           setState(() {
-                    //                             typeOfCounselling = value;
-                    //                           });
-                    //                         },
-                    //                         decoration: InputDecoration(
-                    //                           contentPadding: EdgeInsets.zero,
-                    //                           border: UnderlineInputBorder(),
-                    //                         ),
-                    //                       ),
-                    //                     ),
-                    //                   ],
-                    //                 ),
-                    //                 SizedBox(
-                    //                   width: 20,
-                    //                 ),
-                    //                 Container(
-                    //                   color: Colors.grey.shade500,
-                    //                   width: 1.0,
-                    //                   height: 50.0,
-                    //                 ),
-                    //                 SizedBox(
-                    //                   width: 20,
-                    //                 ),
-                    //                 Column(
-                    //                   mainAxisAlignment: MainAxisAlignment.center,
-                    //                   crossAxisAlignment:
-                    //                   CrossAxisAlignment.start,
-                    //                   children: [
-                    //                     Container(
-                    //                       child: Text(
-                    //                         "District",
-                    //                         style: TextStyle(
-                    //                           color: Colors.grey.shade500,
-                    //                         ),
-                    //                       ),
-                    //                     ),
-                    //                     Container(
-                    //                       width: 200,
-                    //                       child: DropdownButtonFormField<String>(
-                    //                         value: districtType,
-                    //                         isDense: true,
-                    //                         items: <String>[
-                    //                           "Malappuram",
-                    //                           "Alappuzha",
-                    //                           "Ernakulam",
-                    //                           "Idukki",
-                    //                           "Kannur",
-                    //                           "Kasaragod",
-                    //                           "Kollam",
-                    //                           "Kottayam",
-                    //                           "Kozhikode",
-                    //                           "Palakkad"
-                    //                         ].map((state) {
-                    //                           return DropdownMenuItem<String>(
-                    //                             value: state,
-                    //                             child: Text(state),
-                    //                           );
-                    //                         }).toList(),
-                    //                         onChanged: (value) {
-                    //                           setState(() {
-                    //                             districtType = value;
-                    //                           });
-                    //                         },
-                    //                         decoration: InputDecoration(
-                    //                           contentPadding: EdgeInsets.zero,
-                    //                           border: UnderlineInputBorder(),
-                    //                         ),
-                    //                       ),
-                    //                     ),
-                    //                   ],
-                    //                 ),
-                    //                 SizedBox(
-                    //                   width: 40,
-                    //                 ),
-                    //                 Container(
-                    //                   color: Colors.grey.shade500,
-                    //                   width: 1.0,
-                    //                   height: 50.0,
-                    //                 ),
-                    //                 SizedBox(
-                    //                   width: 20,
-                    //                 ),
-                    //                 GestureDetector(
-                    //                   onTap: () {},
-                    //                   child: Container(
-                    //                     height: 65,
-                    //                     width: 60,
-                    //                     decoration: BoxDecoration(
-                    //                         color: Colors.indigo.shade50,
-                    //                         borderRadius:
-                    //                         BorderRadius.circular(15)),
-                    //                     child: Icon(
-                    //                       Icons.search,
-                    //                     ),
-                    //                   ),
-                    //                 ),
-                    //               ],
-                    //             ),
-                    //           ),
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                    // SizedBox(
-                    //   height: 30,
-                    // ),
-                    // Row(
-                    //   children: [
-                    //     SizedBox(
-                    //       width: 20,
-                    //     ),
-                    //     Text(
-                    //       "Best for you",
-                    //       style: TextStyle(
-                    //           color: Colors.grey.shade800,
-                    //           fontSize: 20,
-                    //           fontWeight: FontWeight.w700),
-                    //     ),
-                    //     SizedBox(
-                    //       width: 160,
-                    //     ),
-                    //     GestureDetector(
-                    //       onTap: (){
-                    //         Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                    //           return AllDoctors(
-                    //             uid: widget.uid,
-                    //             createdname: widget.name,
-                    //
-                    //           );
-                    //         }));
-                    //       },
-                    //       child: Container(
-                    //         height: 40,
-                    //         width: 100,
-                    //         decoration: BoxDecoration(
-                    //             color: Colors.indigo.shade100,
-                    //             borderRadius: BorderRadius.circular(15)),
-                    //         child: const Center(
-                    //           child: Text(
-                    //             "See all     >",
-                    //             style: TextStyle(
-                    //                 color: Colors.black,
-                    //                 fontWeight: FontWeight.w700),
-                    //           ),
-                    //         ),
-                    //       ),
-                    //     ),
-                    //   ],
-                    // ),
-                    // SizedBox(
-                    //   height: 40,
-                    // ),
-                    // Row(
-                    //   children: [
-                    //     SizedBox(
-                    //       width: 15,
-                    //     ),
-                    //
-                    //     Container(
-                    //
-                    //       height: 400,
-                    //       width: 350,
-                    //       child: StreamBuilder(
-                    //           stream: FirebaseFirestore.instance.collection("doctor").
-                    //           where("status",isEqualTo: 1).orderBy("createdAt",descending: true).limit(4).
-                    //           snapshots(),
-                    //           builder: (context, AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshot) {
-                    //             if(!snapshot.hasData){
-                    //               // still waiting for data to come
-                    //               return Center(child: CircularProgressIndicator());
-                    //
-                    //             }
-                    //             else if(snapshot.hasData &&  snapshot.data!.docs.length==0) {
-                    //               // got data from snapshot but it is empty
-                    //
-                    //               return Center(child: Text("No Data found"));
-                    //             }
-                    //             else
-                    //               return GridView.builder(
-                    //                 gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                    //                     maxCrossAxisExtent: 250,
-                    //                     childAspectRatio: 1 / 1,
-                    //                     crossAxisSpacing: 20,
-                    //                     mainAxisSpacing: 20),
-                    //                 itemCount:snapshot.data!.docs.length ,
-                    //                 itemBuilder: (context,index){
-                    //                   return Stack(
-                    //                     children: [
-                    //                       Container(
-                    //                         height: 400,
-                    //                         width: 350,
-                    //                         decoration: BoxDecoration(
-                    //                           borderRadius: BorderRadius.circular(8),
-                    //                           color: Colors.white
-                    //                         ),
-                    //                       ),
-                    //                       Positioned(
-                    //                         top:10,
-                    //                           left:20,
-                    //                           child: Icon(Icons.image_rounded,size: 120,)),
-                    //                       Positioned(
-                    //                         left: 60,
-                    //                         bottom:25,
-                    //                           child:Text("Dr.${snapshot.data?.docs[index]['fullname']}",
-                    //                             style:TextStyle(fontSize: 20,fontWeight: FontWeight.bold) ,),),
-                    //                       Positioned(
-                    //                         left: 40,
-                    //                         bottom:10,
-                    //                         child:Text("${snapshot.data?.docs[index]['type']}",
-                    //                           style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),)
-                    //                     ],
-                    //                   );
-                    //
-                    //                 },
-                    //
-                    //               );
-                    //             }
-                    //           ),
-                    //     ),
-                    //
-                    //
-                    //
-                    //     SizedBox(
-                    //       width: 10,
-                    //     ),
-                    //
-                    //   ],
-                    // ),
 
-                    // SizedBox(
-                    //   height: 10,
-                    // ),
                     Center(
                       child: Container(
                         height: 170,
@@ -601,7 +297,7 @@ class _HomePageState extends State<HomePage> {
                                           updates: snapshot.data?.docs[index]['updates'],
                                           uid: widget.uid,
                                           createdname: widget.name,
-                                          imgurl:snapshot.data?.docs[index]['imgurl'] ,
+                                          // imgurl:snapshot.data?.docs[index]['imgurl'] ,
 
                                           id: snapshot.data?.docs[index]['uid'],
                                           location: snapshot.data?.docs[index]['location'],
@@ -642,9 +338,7 @@ class _HomePageState extends State<HomePage> {
                                                       color: Colors.blueAccent,
                                                       shape: BoxShape.circle,
                                                       image: DecorationImage(
-                                                        image: snapshot.data?.docs[index]['imgurl'] != ""
-                                                            ? NetworkImage(snapshot.data?.docs[index]['imgurl']!)
-                                                            : AssetImage('assets/img/doctor.jpeg')
+                                                        image:  AssetImage('assets/img/doctor.jpeg')
                                                         as ImageProvider<Object>,
                                                         fit: BoxFit.cover, // You can adjust the BoxFit as needed
                                                       ),
@@ -936,7 +630,7 @@ class _HomePageState extends State<HomePage> {
                                           updates: snapshot.data?.docs[index]['updates'],
                                           uid: widget.uid,
                                           createdname: widget.name,
-                                          imgurl: snapshot.data?.docs[index]['imgurl'],
+                                         // imgurl: snapshot.data?.docs[index]['imgurl'],
 
                                           id: snapshot.data?.docs[index]['uid'],
                                           location: snapshot.data?.docs[index]['location'],
@@ -975,9 +669,7 @@ class _HomePageState extends State<HomePage> {
                                                       color: Colors.blueAccent,
                                                       shape: BoxShape.circle,
                                                       image: DecorationImage(
-                                                        image: snapshot.data?.docs[index]['imgurl'] != ""
-                                                            ? NetworkImage(snapshot.data?.docs[index]['imgurl']!)
-                                                            : AssetImage('assets/img/profile.png')
+                                                        image: AssetImage('assets/img/doctor.jpeg')
                                                         as ImageProvider<Object>,
                                                         fit: BoxFit.cover, // You can adjust the BoxFit as needed
                                                       ),

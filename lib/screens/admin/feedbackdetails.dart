@@ -91,7 +91,7 @@ class _FeedbackDetailState extends State<FeedbackDetail> {
                     children: [
                       Text(" Reply ",
                         style: TextStyle(color: Colors.blueGrey,fontSize: 22 , fontWeight:FontWeight.bold ),),
-                      Text(widget.reply,
+                      Text(widget!.reply,
                         style: TextStyle(color: Colors.black,fontSize: 22 , fontWeight:FontWeight.bold ),),
                     ],
                   ),

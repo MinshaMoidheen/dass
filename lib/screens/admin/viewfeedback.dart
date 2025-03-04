@@ -45,18 +45,18 @@ class _ViewFeedbcakState extends State<ViewFeedbcak> {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: GestureDetector(
-                          onTap: (){
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>FeedbackDetail(
-                                      title: snapshot.data!.docs[index]['title'],
-                                      description: snapshot.data!.docs[index]['desciption'],
-                                      createdby: snapshot.data!.docs[index]['createdby'],
-                                     fdid: snapshot.data!.docs[index]['feedback_id'],
-
-                                    )));
-                          },
+                          // onTap: (){
+                          //   Navigator.push(
+                          //       context,
+                          //       MaterialPageRoute(
+                          //           builder: (context) =>FeedbackDetail(
+                          //             title: snapshot.data!.docs[index]['title'],
+                          //             description: snapshot.data!.docs[index]['desciption'],
+                          //             createdby: snapshot.data!.docs[index]['createdby'],
+                          //            fdid: snapshot.data!.docs[index]['feedback_id'],
+                          //
+                          //           )));
+                          // },
                           child: Container(
                             width: 250,
                             height: 80,
@@ -75,7 +75,7 @@ class _ViewFeedbcakState extends State<ViewFeedbcak> {
                               leading: Text((index+1).toString()),
                               title: Text(snapshot.data!.docs[index]['title']),
                               subtitle: Text(snapshot.data!.docs[index]['createdby']),
-                              trailing:snapshot.data!.docs[index]['status']==1?Text("Replied"):Text("Replay Pending") ,
+                              //trailing:snapshot.data!.docs[index]['status']==1?Text("Replied"):Text("Replay Pending") ,
 
                             ),
                           ),

@@ -47,24 +47,26 @@ class _DocProfileState extends State<DocProfile> {
 
 
             Center(
-                child: SizedBox(
-                  height: 240,
-                  child: Container(
-                    height: 200,
-                    width: 200,
-                    decoration: BoxDecoration(
-
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: widget.imgurl != null
-                            ? NetworkImage(widget.imgurl!)
-                            : AssetImage('assets/img/logo.png') as ImageProvider<Object>,
-                        fit: BoxFit.cover, // You can adjust the BoxFit as needed
-                      ),
+              child: SizedBox(
+                height: 240,
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent,
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image:AssetImage('assets/img/profile.png')
+                      as ImageProvider<Object>,
+                      fit: BoxFit.cover, // You can adjust the BoxFit as needed
                     ),
                   ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
 
             Row(
               children: [

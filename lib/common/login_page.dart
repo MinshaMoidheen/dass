@@ -145,13 +145,13 @@ class _LoginPageState extends State<LoginPage> {
                                         MaterialPageRoute(
                                           builder: (context) => DoctorHomepage(
                                             name:doctorData['fullname'] ,
-                                            imgurl:doctorData['imgurl'],
+                                            //imgurl:doctorData['imgurl'],
                                             type:  doctorData['type'] ,
-                                            officename: doctorData['officename'] ,
+                                             officename: doctorData['officename'] ,
                                             address: doctorData['address'],
                                             mobile: doctorData['phno'],
                                             uid:  doctorData['uid'],
-                                            exp:  doctorData['experience'],
+                                           exp:  doctorData['experience'],
                                             institution: doctorData['institution'],
                                             licence: doctorData['licence'],
                                             location:doctorData['location'],
@@ -167,7 +167,7 @@ class _LoginPageState extends State<LoginPage> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) => HomePage(
-                                            imgurl:patientData['imageurl'],
+                                           //imgurl:patientData['imageurl'],
                                             uid: patientData['uid'],
                                             name:patientData['name'] ,
                                             email: patientData['email'],

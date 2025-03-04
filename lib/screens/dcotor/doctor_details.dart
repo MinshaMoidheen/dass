@@ -258,41 +258,41 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                     height: 20,
                   ),
 
-                  Center(
-                    child: CircleAvatar(
-                      radius: 33,
-                      child: GestureDetector(
-                        onTap: () {
-                          showImage();
-                        },
-                        child: Center(
-                          child: _image != null
-                              ? Container(
-                                  height: 150,
-                                  width: 150,
-                                  decoration: BoxDecoration(
-                                      color: Colors.red,
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image:
-                                              FileImage(File(_image!.path)))),
-                                )
-                              : Container(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.upload_file,
-                                        size: 20,
-                                      )
-                                    ],
-                                  ),
-                                ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  // Center(
+                  //   child: CircleAvatar(
+                  //     radius: 33,
+                  //     child: GestureDetector(
+                  //       onTap: () {
+                  //         showImage();
+                  //       },
+                  //       child: Center(
+                  //         child: _image != null
+                  //             ? Container(
+                  //                 height: 150,
+                  //                 width: 150,
+                  //                 decoration: BoxDecoration(
+                  //                     color: Colors.red,
+                  //                     shape: BoxShape.circle,
+                  //                     image: DecorationImage(
+                  //                         fit: BoxFit.cover,
+                  //                         image:
+                  //                             FileImage(File(_image!.path)))),
+                  //               )
+                  //             : Container(
+                  //                 child: Row(
+                  //                   mainAxisAlignment: MainAxisAlignment.center,
+                  //                   children: [
+                  //                     Icon(
+                  //                       Icons.upload_file,
+                  //                       size: 20,
+                  //                     )
+                  //                   ],
+                  //                 ),
+                  //               ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                   SizedBox(height: 10,),
                   Container(
                     width: 300,
@@ -406,11 +406,11 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                     width: 300,
                     child: TextFormField(
                       controller: _addressController,
-                      // validator: (value) {
-                      //   if (value!.isEmpty) {
-                      //     return "updates is required";
-                      //   }
-                      // },
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return "updates is required";
+                        }
+                      },
                       decoration: InputDecoration(
                           hintText: "Your Updates",
                           enabledBorder: const OutlineInputBorder(
@@ -642,45 +642,7 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                   SizedBox(
                     height: 10,
                   ),
-                  // Container(
-                  //   width: 300,
-                  //   child: TextFormField(
-                  //     controller: _graduationYearController,
-                  //     validator: (value) {
-                  //       if (value!.isEmpty) {
-                  //         return "Graduation year is required";
-                  //       }
-                  //     },
-                  //     decoration: InputDecoration(
-                  //       hintText: "Graduation Year",
-                  //       enabledBorder: const OutlineInputBorder(
-                  //         borderSide: BorderSide(color: Colors.black),
-                  //       ),
-                  //       focusedBorder: OutlineInputBorder(
-                  //         borderSide: BorderSide(color: Colors.grey.shade400),
-                  //       ),
-                  //       fillColor: Colors.white,
-                  //       filled: true,
-                  //       hintStyle: TextStyle(color: Colors.grey[500]),
-                  //       suffixIcon: DropdownButton<String>(
-                  //         value: selectedYear, // Initially selected year (set this in your state)
-                  //         onChanged: (newValue) {
-                  //           setState(() {
-                  //             selectedYear = newValue!;
-                  //             _graduationYearController.text = newValue; // Update the text in the TextFormField
-                  //           });
-                  //         },
-                  //         items: List.generate(50, (index) {
-                  //           int year = DateTime.now().year - 25 + index;
-                  //           return DropdownMenuItem<String>(
-                  //             value: year.toString(),
-                  //             child: Text(year.toString()),
-                  //           );
-                  //         }),
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
+
                   SizedBox(
                     height: 20,
                   ),
@@ -714,93 +676,110 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                   SizedBox(
                     height: 10,
                   ),
-                  Container(
-                    width: 300,
-                    child: TextFormField(
-                      onTap: () {
-                        pickPDF();
-                      },
-                      controller: _fileController,
-                      // validator:(value){
-                      //   if(value!.isEmpty)
-                      //   {
-                      //     return " File is empty";
-                      //   }
-                      // },
-                      decoration: InputDecoration(
-                          hintText: "Upload you License ",
-                          enabledBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey.shade400),
-                          ),
-                          fillColor: Colors.white,
-                          filled: true,
-                          hintStyle: TextStyle(color: Colors.grey[500])),
-                    ),
-                  ),
+                  // Container(
+                  //   width: 300,
+                  //   child: TextFormField(
+                  //     onTap: () {
+                  //       //pickPDF();
+                  //     },
+                  //     controller: _fileController,
+                  //     // validator:(value){
+                  //     //   if(value!.isEmpty)
+                  //     //   {
+                  //     //     return " File is empty";
+                  //     //   }
+                  //     // },
+                  //     decoration: InputDecoration(
+                  //         hintText: "Upload you License ",
+                  //         enabledBorder: const OutlineInputBorder(
+                  //           borderSide: BorderSide(color: Colors.black),
+                  //         ),
+                  //         focusedBorder: OutlineInputBorder(
+                  //           borderSide: BorderSide(color: Colors.grey.shade400),
+                  //         ),
+                  //         fillColor: Colors.white,
+                  //         filled: true,
+                  //         hintStyle: TextStyle(color: Colors.grey[500])),
+                  //   ),
+                  // ),
                   SizedBox(
                     height: 10,
                   ),
 
-                  MaterialButton(
-                    onPressed: () {
-                      if (_regKey.currentState!.validate()) {
-                        uploadsPDF();
-                      }
+              MaterialButton(
+                onPressed: () {
 
-                      // if (_regKey.currentState!.validate()) {
-                      //   FirebaseAuth.instance
-                      //       .createUserWithEmailAndPassword(
-                      //       email: _emailController.text,
-                      //       password: _passwordController.text)
-                      //       .then((value) {
-                      //     FirebaseFirestore.instance
-                      //         .collection('doctor')
-                      //         .doc(value.user!.uid)
-                      //         .set({
-                      //       'fullname':_fullnameController.text,
-                      //       'address':_addressController.text,
-                      //       'phno':_mobileController.text,
-                      //       'institution':_institutionController.text,
-                      //       'graduation':_graduationYearController.text,
-                      //       'licence':_licenseController.text,
-                      //       'file':_fileController.text,
-                      //       'qualification':educationalValue,
-                      //     'type':selectedValue,
-                      //       'email':_emailController.text,
-                      //       'password':_passwordController.text,
-                      //       'status':1,
-                      //       'createdAt':DateTime.now(),
-                      //       'usertype':'doctor',
-                      //       "id":v1,
-                      //
-                      //     });
-                      //   }).then((value) {
-                      //     ScaffoldMessenger.of(context).showSnackBar(
-                      //       SnackBar(
-                      //         content: Text('Registerd succesfully'),
-                      //       ),
-                      //     );
-                      //     Navigator.pushAndRemoveUntil(
-                      //         context,
-                      //         MaterialPageRoute(
-                      //             builder: (context) => LoginPage()),
-                      //             (route) =>false);
-                      //   });
-                      //
-                      //
-                      //
-                      // }
-                    },
-                    color: Colors.lightBlue.shade900,
-                    child: Text(
-                      "Submit",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                  SizedBox(
+                  if (_regKey.currentState!.validate() ) {
+                    if (_regKey.currentState!.validate()) {
+                      try {
+
+                        FirebaseAuth.instance.createUserWithEmailAndPassword(
+                          email: _emailController.text.trim(),
+                          password: _passwordController.text.trim(),
+                        ).then((user) {
+                          FirebaseFirestore.instance.collection('Login').doc(user.user!.uid).set({
+                            'uid': user.user!.uid,
+                            'name': _fullnameController.text.trim(),
+                            'email': _emailController.text.trim(),
+                            'password': _passwordController.text.trim(),
+                            'status': 1,
+                            'type': "doctor",
+                            'date': DateTime.now(),
+                          }).then((value) {
+                            FirebaseFirestore.instance.collection("doctor").doc(user.user!.uid).set({
+                              'uid': user.user!.uid,
+                              'fullname': _fullnameController.text.trim(),
+                              'address': _addressController.text.trim(),
+                              'phno': _mobileController.text.trim(),
+                              "updates": _addressController.text,
+                              'institution': _institutionController.text.trim(),
+                              'graduation': _graduationYearController.text.trim(),
+                              'licence': _licenseController.text.trim(),
+                              'qualification': educationalValue,
+                              'type': selectedValue,
+                              'email': _emailController.text.trim(),
+                              "officename":_officename.text.trim(),
+                              "location":_locationController.text.trim(),
+                              "workinghrs":_workhrController.text.trim(),
+                              "experience":_expController.text.trim(),
+                              'status': 1,
+                              'createdAt': DateTime.now(),
+                              'usertype': 'doctor',
+                              "id": v1,
+
+                            }).then((value) {
+                              showsnackbar("Registered Successfully!");
+                              Navigator.pop(context);
+                            }).catchError((e) => showsnackbar("Registration Failed!"));
+                          }).catchError((e) => showsnackbar("Registration Failed!"));
+                        }).catchError((e) {
+                          print('Authentication Error: $e');
+                          showsnackbar("Authentication Failed!");
+                        });
+                      } catch (e) {
+                        print('Error: $e');
+                        showsnackbar("Registration Failed! Error: $e");
+                      }
+                    }
+
+
+
+
+
+                  }
+
+
+
+
+                },
+                color: Colors.lightBlue.shade900,
+                child: Text(
+                  "Submit",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+
+              SizedBox(
                     height: 15,
                   ),
 
